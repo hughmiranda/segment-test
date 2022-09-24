@@ -1,0 +1,11 @@
+<p>my-component works!</p>
+<button (click)="sendTrack('Annual')">Annual</button>
+<button (click)="sendTrack('Pro Annual')">Pro Annual</button>
+
+<div class="products">
+  <div *ngFor="let product of products;" class="product--{{ product.id }}">
+     <p>{{ product.name }}</p>
+     <p>{{ product.price }}</p>
+     <button (click)="buyProduct(product.id)">Buy</button>
+  </div>
+</div>
